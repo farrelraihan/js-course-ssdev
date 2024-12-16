@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Cart Quantity</title>
+</head>
+<body>
+  <p>
+    Cart Quantity
+  </p>
+
+  <button 
+  onclick="
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    Show Quantity
+  </button>
+
+  <button 
+  onclick="
+  cartQuantity = cartQuantity + 1;
+  // the code below is doing the same thing.
+  // cartQuantity += 1;
+  // cartQuantity++;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    Add to Cart
+  </button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 2;
+  // below is shortcut to reassign the value of a variable
+  // cartQuantity += 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    +2
+  </button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 3;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    +3
+  </button>
+
+  <button onclick="
+  // cartQuantity = cartQuantity - cartQuantity;
+  // console.log(`Cart was reset.\nCart Quantity: ${cartQuantity}`);
+  // code above was my solution, but the code below is the courses's solution
+
+  cartQuantity = 0;
+  console.log(`Cart Was Reset`);
+  console.log(`Cart Quantity: ${cartQuantity}`)
+  ">
+    Reset Cart
+  </button>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Variables</title>
+  </head>
+  <body>
+
+    <script>
+      // variable name cant be "let" because it is a reserved word
+      // variable name cant start with a number
+      // variable name cant contain a space
+      // variable name cant use special characters except for _ and $
+
+      // buat variable and show it in console
+      let variable1 = 3;
+      console.log(variable1);
+
+      // buat variable and show it, but you can process it again in the show
+      let calculation = 5 + 5;
+      console.log(calculation);
+      console.log(calculation + 6);
+
+      // can also process it directly when declaring the variable
+      let result = calculation + 6;
+      console.log(result);
+
+      // variable can be string
+      let message = `hello`;
+      console.log(message);
+
+      // variable can be changed, but the value of the previous one still exists.
+      // do not use let to reassign the value of a variable
+      variable1 = 5;
+      console.log(variable1);
+
+      variable1 = variable1 + 5;
+      console.log(variable1); 
+
+
+      // ways to create variables other than using let
+      const variable2 = 3; // const cant be reassigned later. use it by default. 
+      // use let if you need to reassign the value of a variable
+
+      var variable3 = 3; // var is the old way to create a variable. do not use it anymore.
+
+
+      // typeof is used to check the data type of a variable
+      console.log(typeof variable1);
+      console.log(typeof message);
+    </script>
+  </body>
+</html>
+
+
+

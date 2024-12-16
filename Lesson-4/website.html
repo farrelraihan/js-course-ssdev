@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Review Lesson 4</title>
+
+    <!-- This part of the lesson is just reviewing the basic of HTML and CSS.
+    Just to remind ourself what HTML and CSS Does -->
+
+    
+    <style>
+      button {
+      background-color: white;
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: grey;
+
+      padding: 4px 8px;
+    }
+    </style>
+  </head>
+  <body>
+    <button title="tooltip"
+    onclick="
+    alert('Good Job!');
+    ">
+    hello
+    </button>
+
+    <p>
+    paragraph of <button>hello</button> text
+    </p>
+
+    <!-- ways to run Javascript inside HTML, can be here (which is loaded first) or use the onclick HTML Attributes -->
+     <!-- Use console.log to show the output of JS in the console tab -->
+    <script>
+      // alert("Hello, World!");
+
+      console.log(2 + 5);
+      console.log('some' + 'three' + 'words');
+    </script>
+  </body>
+</html>
+
+
+
