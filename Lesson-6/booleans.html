@@ -76,7 +76,13 @@
       console.log(result);
 
 
-      
+      false && console.log('hello'); // if the first value is falsy, then the second value will not be executed (GUARD OPERATOR). Its kinda a shortcut for if statement. Can be saved in a variable.
+
+      let message  = 4 && 'hello'; //the youtube guy give example with const here, but it will give an error and the console log output is different. So I change it to let.
+      console.log(message);
+
+      const currency = undefined || 'USD'; // if the first value is falsy, then the second value will be executed. (DEFAULT VALUE)
+      console.log(currency);
 
   </script>
 </body>
