@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+
+  <!-- comparison operators
+  > greater than
+  < less than
+  >= greater than or equal to
+  <= less than or equal to
+  === equal to , == is also equal to. but it is not strict can be used different types of data
+  !== not equal to -->
+
+  <script>
+    /*
+    console.log(6 >= 7);
+
+    if (false) {
+      console.log(`hello`);
+    } else {
+      console.log(`goodbye`);
+    }
+
+    const age = 25;
+    if (age >= 18) {
+      console.log(`You are old enough to drive`);  
+    } else {
+      console.log(`You CANNOT drive bruh`);
+    }
+
+    const age2 = 18;
+    if (age2 >= 15) {
+      console.log(`You are old enough to drive`);  
+    } else if (age2 >= 15) { //adding another additional condition
+      console.log(`Close enough but not yet`);
+    } else {
+      console.log(`You CANNOT drive bruh`);
+    }
+      */
+
+    /*
+      console.log(true && false);
+      console.log(0.2 >= 0 && 0.2 < 1 / 3); // AND Operator, both side have to be true
+
+      console.log(true || false); //OR Operator, one side true then true
+
+      console.log(!false);  // NOT Operator. if false then true, if true then false
+      */
+
+
+      // truthy and falsy values
+      // falsy values: 0, '', null, undefined, NaN
+      // thruthy values: everything else
+
+      /*
+      if (1) {
+        console.log('ktl');
+      }
+
+      const cartQuantity = 5; // thruthy value example
+      if (cartQuantity) { // if cartQuantity is not 0, then it is true
+        console.log(`Cart has products`); 
+      }
+
+      console.log('text' / 5); // NaN example
+
+      let variaaable;
+      console.log(variaaable); // undefined example
+      */
+
+      const result = 2 ? 'thruthy' : 'falsy'; // ternary operator. Jika condition thruthy, maka value pertama akan dijalankan, jika false, maka value kedua akan dijalankan.
+      console.log(result);
+
+
+      
+
+  </script>
+</body>
+</html>

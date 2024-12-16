@@ -1,0 +1,158 @@
+  <!-- 5l. add html structure for calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Calculator-Exercises</title>
+</head>
+<body>
+  <!-- 5m. Create 5 button (1,2,3,+,=) -->
+  <!-- 5o. when clicking 1 button, add string 1 to variable, display it to console -->
+
+  <p>
+    <button onclick="
+    calculation += '1';
+    console.log(calculation);
+    ">
+      1
+    </button>
+  
+    <!-- 5p. do the same for 2,3 and + buttons -->
+    <button onclick="
+    calculation += '2';
+    console.log(calculation);
+    ">
+      2
+    </button>
+  
+    <button onclick="
+    calculation += '3';
+    console.log(calculation);
+    ">
+      3
+    </button>
+  
+    <button onclick="
+    calculation += ' + ';
+    console.log(calculation);
+    ">
+      +
+    </button>
+  </p>
+
+
+
+  <!-- 5r. create the rest of the button -->
+   <p>
+    <button onclick="
+      calculation += '4';
+      console.log(calculation);
+      ">
+      4
+    </button>
+  
+    <button onclick="
+    calculation += '5';
+    console.log(calculation);
+    ">
+      5
+    </button>
+  
+    <button onclick="
+    calculation += '6';
+    console.log(calculation);
+    ">
+      6
+    </button>
+  
+    <button onclick="
+    calculation += ' - ';
+    console.log(calculation);
+    ">
+      -
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      calculation += '7';
+      console.log(calculation);
+      ">
+      7
+    </button>
+
+    <button onclick="
+    calculation += '8';
+    console.log(calculation);
+    ">
+      8
+    </button>
+
+    <button onclick="
+    calculation += '9';
+    console.log(calculation);
+    ">
+      9
+    </button>
+
+    <button onclick="
+    calculation += ' * ';
+    console.log(calculation);
+    ">
+      *
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      calculation += '0';
+      console.log(calculation);
+      ">
+      0
+    </button>
+
+    <button onclick="
+    calculation += '.';
+    console.log(calculation);
+    ">
+      .
+    </button>
+
+  <!-- 5q. when we click =, use code eval(calculation) to converts string to number and calculate the result. save the result back to variable. display it in console. -->
+  <button onclick="
+  eval(calculation);
+  calculation = eval(calculation);
+  console.log(calculation);
+  ">
+    =
+  </button>
+
+
+    <button onclick="
+    calculation += ' / ';
+    console.log(calculation);
+    ">
+      /
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      calculation = '';
+      console.log(`Cleared`);
+      console.log(calculation);
+      ">
+      Clear
+    </button>
+   </p>
+
+
+
+  <!-- 5n. create script tag and variable 'calculation'-->
+  <script>
+    let calculation = '';
+  </script>
+
+</body>
+</html>
