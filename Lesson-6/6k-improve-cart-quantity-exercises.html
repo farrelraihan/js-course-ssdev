@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improved-6 Simple Cart Quantity</title>
+</head>
+<body>
+  <!--6k. cart max qtt is 10. before updating the qtt, check if qtt will be > 10. if yes return cart is full and do not update qtt. otherwise update and return as usual-->
+
+  <!--6l. on the remove/decrease btn, before updating, check qtt will below 0 or not. if ys, create popup not enough item dont update qtt. otherwise like usual-->
+  <p>
+    Cart Quantity
+  </p>
+
+  <button 
+  onclick="
+  console.log(`Cart Quantity: ${cartQuantity}`);
+  ">
+    Show Quantity
+  </button>
+
+  <button 
+  onclick="
+  // 6k. i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+  // UPDATE: yep turnsout it is stupid, the solution the guy gave were:
+  // if (cartQuantity + 1 > 10) {
+  //       alert('The cart is full');
+  //     } else {
+  //       cartQuantity++;
+  //       console.log(`Cart quantity: ${cartQuantity}`);
+  //     }
+  
+  if (cartQuantity >= 10){
+    alert(`The cart is full`);
+  } else {
+    cartQuantity = cartQuantity + 1;
+  // the code below is doing the same thing.
+  // cartQuantity += 1;
+  // cartQuantity++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  }
+
+  ">
+    Add to Cart
+  </button>
+
+  <button onclick="
+    // 6k. i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+    if (cartQuantity > 8){
+      alert(`The cart is full`);
+    } else {
+      cartQuantity = cartQuantity + 2;
+  // below is shortcut to reassign the value of a variable
+  // cartQuantity += 2;
+  console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+
+  ">
+    +2
+  </button>
+
+  <button onclick="
+    // 6k. i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+    if (cartQuantity > 7){
+    alert(`The cart is full`);
+    } else {
+      cartQuantity = cartQuantity + 3;
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+
+  ">
+    +3
+  </button>
+
+  <!-- 5h add 2 more button  using += -->
+  <button onclick="
+    // 6k. i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+    if (cartQuantity > 6){
+      alert(`The cart is full`);
+    } else {
+      cartQuantity += 4;  //5h 
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+
+  ">
+    +4
+  </button>
+
+  <button onclick="
+    // 6k. i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+    if (cartQuantity > 5){
+      alert(`The cart is full`);
+    } else {
+      cartQuantity += 5;  //5h 
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+  ">
+    +5
+  </button>
+
+  <!-- 5i add a button to remove from cart. -->
+  <button onclick="
+    // 6l. check quantity so it dont go below minus.
+    // i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+    // UPDATE: yep turnsout it is stupid, the solution the guy gave were:
+    // if (cartQuantity - 1 < 0) {
+    //     alert('Not enough items in the cart');
+    //   } else {
+    //     cartQuantity--;
+    //     console.log(`Cart quantity: ${cartQuantity}`);
+    //   }
+  if (cartQuantity <= 0){
+    alert(`Not enough items in the cart`);
+  }else {
+    cartQuantity --; //5i
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  }
+  ">
+    Remove from Cart
+  </button>
+
+  <!-- 5j add 2 button -2 and -3 -->
+  <button onclick="
+  // 6l. check quantity so it dont go below minus.
+  // i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+  if (cartQuantity < 2){
+    alert(`Not enough items in the cart`);
+  }else {
+    cartQuantity -= 2; //5j
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  }
+  ">
+    -2
+  </button>
+
+  <button onclick="
+    // 6l. check quantity so it dont go below minus.
+    // i think this is a stupid solution tho.. might wanna check the proper solution the guy gave.
+  if (cartQuantity < 3){
+    alert(`Not enough items in the cart`);
+  }else {
+    cartQuantity -= 3; //5j
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  };
+  ">
+    -3
+  </button>
+
+  <button onclick="
+  // cartQuantity = cartQuantity - cartQuantity;
+  // console.log(`Cart was reset.\nCart Quantity: ${cartQuantity}`);
+  // code above was my solution, but the code below is the courses's solution
+
+  cartQuantity = 0;
+  console.log(`Cart Was Reset`);
+  console.log(`Cart Quantity: ${cartQuantity}`)
+  ">
+    Reset Cart
+  </button>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+</body>
+</html>

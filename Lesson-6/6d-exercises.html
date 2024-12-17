@@ -11,12 +11,24 @@
     // 6d. Amusement Park has discount for children (6 years and younger) or seniors (65 years and older).
     // create variable age. create if-statement check qualification, if they do display Discount in the console, otherwise display No Discount in the console. Try using || operator
 
+    // 6e. Continuing, discount only avail if not holiday. make variable holiday=true. modify the code
 
-    //not done. break
+    const isHoliday = true;
     const age = 4;
-    if (age ){
-
+    if ((age <= 6 && isHoliday === false) ||  (age >= 65 && isHoliday === false) ){
+      console.log(`Discount`);
+    } else {
+      console.log(`No Discount`);
     }
+
+    //above is my solution, when i checked the exercise solution from the youtube guy, his solution is like this:
+    // if ((age <= 6 || age >= 65) && !isHoliday) {
+    //   console.log('Discount');
+    // } else {
+    //   console.log('No discount');
+    // }
+
+    // both produced the same result, but i think his solution is more efficient and simple,
   </script>
 </body>
 </html>
