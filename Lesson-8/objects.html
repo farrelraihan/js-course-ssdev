@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects Lesson 8</title>
+</head>
+<body>
+  <!-- let us group multiple values together. thats object-->
+  <script>
+    /*
+    // ini adalah object, kok kaya array ya?
+    const product = {
+      name: 'socks', // property: value
+      price: 1090
+    }; 
+    console.log(product);
+
+    // DOT NOTATION
+    console.log(product.name); //object.property = value // dot notation.
+    console.log(product.price);
+
+    // change value inside the object
+    product.name = 'cotton cock';
+    console.log(product);
+
+    // create new property inside the object
+    product.newProperty = 123;
+    console.log(product);
+
+    // delete property inside the object
+    delete product.newProperty;
+    console.log(product);
+
+    */
+
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      // Nested object (Inner object)
+      rating: {  
+        stars: 4.5,
+        count: 87
+      },
+      // function inside an object.
+      fun: function function1() {
+        console.log('function inside an object wow');
+      }
+
+    };
+    console.log(product2);
+
+    // accessing function inside an object (method)
+    product2.fun();
+
+    // BRACKET NOTATION
+    // another way to access value of the object besides dot notation.
+    // useful for  property with - as their names.
+    console.log(['name']);
+    console.log(product2['delivery-time']);
+    
+    // accessing Nested Object
+    console.log(product2.rating.count);
+    console.log(product2.rating['stars']);
+
+
+    // JSON Object Function
+    // JSON did not support function inside the object
+    // JS to JSON convert. (built in object)
+    console.log(JSON.stringify(product2));
+
+    // JSON to JS
+    //JSON to String
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString)); //string of JSON to JS object
+
+
+    // localStorage (built-in object)
+    // to saves value more permanently (uninterrupted by refresh/reload)
+    
+    // ADD item to storage
+        // localStorage.setItem('score', JSON.stringify(score)); //convert it to json string
+
+    // GET item from the storage
+      // let score = JSON.parse(localStorage.getItem('score')) 
+      //newly replaced. converted back to JS object.
+
+      // check if null then give default value
+      // if (score === null){
+      //   score = {
+      //     wins: 0,
+      //     loses: 0,
+      //     ties: 0
+      //   }
+      // }
+
+    // REMOVE item from the storage
+      // localStorage.removeItem('score');
+
+
+
+  </script>
+</body>
+</html>

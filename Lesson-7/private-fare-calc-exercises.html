@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Fare Exercises (private)</title>
+</head>
+<body>
+  
+  <script>
+    function calculateFare (distance, time){
+      if (time < 0 || time >= 24){
+        return('Invalid Time Inserted (0 - 24)');
+
+      }else if (distance <= 0) {
+        return('Invalid Distance Inserted');
+      
+      }
+
+      const baseFare = 5; // for the first 2km.
+      const additionalFarePerKm = 2;
+      const surcharge = 3; // apply between 22:00 and 06:00
+
+      let fare = baseFare;
+
+
+      if (distance > 2) {
+        fare += (distance - 2) * additionalFarePerKm;
+      } 
+
+      if ( time <= 6 || time >= 22 ) {
+        fare+= surcharge;
+      }
+
+      return(`Fare: $${fare}`);
+    }
+
+
+
+    console.log(calculateFare(4, 23));
+  </script>
+</body>
+</html>

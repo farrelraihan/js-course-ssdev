@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator Exercises (private)</title>
+</head>
+<body>
+  
+  <script>
+    function calculateBMI (weightInKilo, heightInMeter) {
+      if (weightInKilo <= 0){
+        return(`Invalid Weight`);
+      
+      } else if (heightInMeter <= 0) {
+        return('Invalid Height');
+      
+      } else {
+        const bmi = weightInKilo / (heightInMeter * heightInMeter);
+        
+        if (bmi < 18.5) {
+          return('Underweight');
+        
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+          return('Normal Weight');
+        
+        } else if (bmi >= 25 && bmi <= 29.9) {
+          return('Overweight');
+        
+        } else {
+          return('Obesity');
+        }
+      } 
+    }
+
+    console.log(calculateBMI(90,1.8));
+  </script>
+</body>
+</html>
