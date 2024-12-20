@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 Exercisesss</title>
+</head>
+<body>
+  <!-- 9a. Create 9a button, target it in js and show in console-->
+  <button class="js-9a-btn">9a</button>
+
+  <!-- 9b. Create 9b button, target it in js and show in consol, change texte-->
+  <button class="js-9b-btn">9b</button>
+
+  <p> divider </p>
+  <!-- 9c. create button headtail. create paragraf show you chose what.-->
+   <button class="js-option-btn" onclick="
+      chooseWhat('heads');
+   " >heads</button>
+
+   <button class="js-option-btn"
+   onclick="
+   chooseWhat('tails');
+   ">tails</button>
+   <p class="js-chose-txt"></p>
+
+   <p> divider </p>
+
+   <!-- 9d. create texboxt and submit btn. when click submit, output Your Name: inputted inside textboxt.-->
+    <input type="text" class="js-name-input" onkeydown="
+    handleEnterSubmit(event);
+    ">
+    <button class="js-submit-btn" onclick="
+    nameSubmit();
+    ">Submit</button>
+    <p class="js-name-show"></p>
+  
+  <script>
+    // 9a.
+    console.log(document.querySelector('button'));
+
+    // 9b.
+    document.querySelector('.js-9b-btn').innerHTML = '9b done!';
+
+    // 9c. 
+    function chooseWhat (aigo){
+      inputted = aigo;
+      let pick = '';
+
+      if (inputted === 'heads'){
+        pick = 'heads'
+      } else if (inputted === 'tails') {
+        pick = 'tails'
+      }
+      document.querySelector('.js-chose-txt').innerHTML = `You Chose: ${pick}`
+    }
+
+    // 9d. 
+    function nameSubmit (){
+      const inputElement = document.querySelector('.js-name-input');
+      let name = inputElement.value;
+
+      document.querySelector('.js-name-show').innerHTML = `Your name is: ${name}`;
+    }
+
+    function handleEnterSubmit(event) {
+      if (event.key === 'Enter') {
+        nameSubmit()
+      }
+    }
+
+
+  </script>
+</body>
+</html>

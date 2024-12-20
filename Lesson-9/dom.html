@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 - DOM Document Object Model</title>
+</head>
+<body>
+  
+  <button>
+    hello
+  </button>
+ 
+  <button class="js-button">Second Button</button>
+ <script>
+  /// properties 
+    // console.log(document.title);
+    // document.title = 'Changed';
+    // console.log(document.title);
+
+    // .body will put entire body form html into JS
+    // letting JS control the HTML (converted to JS)
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    // console.log(document.body.innerHTML);
+    // document.body.innerHTML = 'htmlchanged'
+    // console.log(document.body.innerHTML);
+    // document.body.innerHTML = '<button> baton </button>'
+
+      // .innerText will get the only text, more accurate rather tahn innerHTML
+      // document.body.innerText
+
+  /// Methods (function didalam object)
+    // query selector gets any element, to put inside JS
+    document.querySelector('button');
+    console.log(document.querySelector('button').innerHTML); // select apa yg ada didalam html button
+    document.querySelector('button').innerHTML = 'TOMBOL'; // mengubah apa yg ada didalam button
+
+    // selecting btn with class
+    document.querySelector('.js-button').innerHTML = 'TOMBOL DUA';
+
+    // bisa disimpan jg ke variable cuz its object.
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+    // jadinya bisa diakses lgsg kaya gini
+    buttonElement.innerHTML = ' ganti'
+  
+    /*
+      document.body.innerHTML = 'hello';
+      document.title = 'congrats';
+      // built in object.properties
+    */
+
+    // can also convert number to string
+    // String(25);
+    // console.log('25' - 5); // auto type convert on MINUS ONLY
+
+    // can convert string to number
+    // let cost = Number(inputElement.value); // always a string have to put Number()
+ </script>
+</body>
+</html>
