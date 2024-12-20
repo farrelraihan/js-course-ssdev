@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8a-Exercises-Objects</title>
+</head>
+<body>
+  
+  <script>
+    // 8a. create object basketball with price
+    const product = {
+      name: 'basketball',
+      price: 2095
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+    // 8b. change price up 500, display it
+    product.price = 2595;
+    console.log(product);
+
+    // 8c. use bracket notation, add delivery-time. display it
+    product['delivery-time'] = '3 days';
+    console.log(product);
+
+    // 8d. create function compareprice. takes 2 product, return product cheaper.
+    const product2 = {
+      name: 'kaki anak kecil',
+      price: 2595,
+      ['delivery-time'] : 'instant'
+    };
+    console.log(product2);
+
+    function comparePrice(productA, productB){
+      if (productA.price > productB.price){
+        return(productB);
+      } else if (productB.price > productA.price) {
+        return(productA);
+      } else {
+        return('they are equaly priced');
+      }
+    }
+    console.log(comparePrice(product,product2));
+
+
+    // 8e. create function issameproduct, return true if 2 product have same value inside name and price.
+    const product3 = {
+      name: 'kaki anak kecil',
+      price: 2505,
+      ['delivery-time']: 'instant'
+    };
+    function isSameProduct(productA, productB){
+
+      if (JSON.stringify(productA) === JSON.stringify(productB)){
+        return(true);
+      } else {
+        return(false);
+      }
+    }
+    console.log(isSameProduct(product3, product2));
+
+    // second solution of 8e.
+    function isSameProduct2(productA, productB){
+      if (productA.name === productB.name && productA.price === productB.price && productA['delivery-time'] === productB['delivery-time']){
+        return(true);
+      } else {
+        return(false);
+      }
+    }
+    console.log(isSameProduct2(product3, product2));
+
+
+    // 8f. convert string to all lowercase
+    console.log('GOOD MORNING'.toLowerCase());
+
+    
+    // 8g. repeat string many times.
+    console.log('NINJA'.repeat(3));
+  </script>
+</body>
+</html>

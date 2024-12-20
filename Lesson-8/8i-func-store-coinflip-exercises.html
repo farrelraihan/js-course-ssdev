@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6j Coinflip</title>
+</head>
+<body>
+  <button onclick="
+    playGame(`Heads`)
+    ">
+    Heads
+  </button>
+
+  <button onclick="
+  playGame(`Tails`)
+  ">
+    Tails
+  </button>
+
+  <button onclick="
+  resetScore();
+  ">
+    Reset Score
+  </button>
+  <script>
+  // 6f. generate rannumb with Math.random, save it to variable
+  // 6g. create if-statement check: if number < 0.5 display heads, else display tails
+  // 6h. save to result variable
+  // 6i. create guess variable, if guess match display win, if not display lose
+  // 6j. (challenge) dont use if statement, use ternary operators.
+
+  // 6f, 6g
+              // let randomNumber = Math.random();
+              // let result = ``;
+              // if (randomNumber < 1 / 2){
+              //   console.log(`Heads`);
+              //   result = `Heads` //6h
+              // } else {
+              //   console.log(`Tails`);
+              //   result = `Tails`  // 6h
+              // }
+  // console.log(randomNumber); // just checking
+
+  // 6i
+                // let guess = `Heads`;
+                // if (guess === result){
+                //   console.log(`You WIN`);
+                // } else{
+                //   console.log(`You LOSE`);
+                // }
+
+  // 8j. score
+  let scoree = JSON.parse(localStorage.getItem('scoree')) ||{
+    wins: 0,
+    loss: 0
+  };
+  
+
+
+  // 8i. improve, make function
+  function playGame(guess){
+    let randomNumber = Math.random();
+    if (randomNumber < 1 / 2){
+      console.log(`Heads`);
+      result = `Heads` //6h
+    } else {
+      console.log(`Tails`);
+      result = `Tails`  // 6h
+    }
+
+    console.log(randomNumber);
+
+    if (guess === result){
+      scoree.wins += 1;
+      console.log(scoree);
+    } else {
+      scoree.loss += 1;
+      console.log(scoree);
+    }
+
+    localStorage.setItem('scoree', JSON.stringify(scoree));
+  }
+
+  // 6j
+  console.log(guess === result ? `You Win` : `You Lose`);
+  // condition ? yes run 1st : no run 2nd.
+  
+
+  function resetScore(){
+    scoree.wins = 0;
+    scoree.loss = 0;
+    localStorage.removeItem('scoree');
+    console.log(`Score Has been Reset!`);
+    console.log(scoree);
+  };
+
+
+
+
+
+  </script>
+</body>
+</html>
