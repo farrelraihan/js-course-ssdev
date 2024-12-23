@@ -1,0 +1,209 @@
+  <!-- 5l. add html structure for calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7- Improved Calculator using Function</title>
+</head>
+<body>
+  <!-- 9j. show calc on page, also if theres in localStorage-->
+  <p class="js-calc-text"></p>
+
+  <!-- 5m. Create 5 button (1,2,3,+,=) -->
+  <!-- 5o. when clicking 1 button, add string 1 to variable, display it to console -->
+
+  <p>
+    <button onclick="
+    // calculation += '1';
+    // console.log(calculation);
+    updateCalculation('1');
+    ">
+      1
+    </button>
+  
+    <!-- 5p. do the same for 2,3 and + buttons -->
+    <button onclick="
+    // calculation += '2';
+    // console.log(calculation);
+    updateCalculation('2');
+    ">
+      2
+    </button>
+  
+    <button onclick="
+    // calculation += '3';
+    // console.log(calculation);
+    updateCalculation('3');
+    ">
+      3
+    </button>
+  
+    <button onclick="
+    // calculation += ' + ';
+    // console.log(calculation);
+    updateCalculation(' + ');
+    ">
+      +
+    </button>
+  </p>
+
+
+
+  <!-- 5r. create the rest of the button -->
+   <p>
+    <button onclick="
+      // calculation += '4';
+      // console.log(calculation);
+      updateCalculation('4');
+      ">
+      4
+    </button>
+  
+    <button onclick="
+    // calculation += '5';
+    // console.log(calculation);
+    updateCalculation('5');
+    ">
+      5
+    </button>
+  
+    <button onclick="
+    // calculation += '6';
+    // console.log(calculation);
+    updateCalculation('6');
+    ">
+      6
+    </button>
+  
+    <button onclick="
+    // calculation += ' - ';
+    // console.log(calculation);
+    updateCalculation(' - ');
+    ">
+      -
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      // calculation += '7';
+      // console.log(calculation);
+      updateCalculation('7');
+      ">
+      7
+    </button>
+
+    <button onclick="
+    // calculation += '8';
+    // console.log(calculation);
+    updateCalculation('8');
+    ">
+      8
+    </button>
+
+    <button onclick="
+    // calculation += '9';
+    // console.log(calculation);
+    updateCalculation('9');
+    ">
+      9
+    </button>
+
+    <button onclick="
+    // calculation += ' * ';
+    // console.log(calculation);
+    updateCalculation(' * ');
+    ">
+      *
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      // calculation += '0';
+      // console.log(calculation);
+      updateCalculation('0');
+      ">
+      0
+    </button>
+
+    <button onclick="
+    // calculation += '.';
+    // console.log(calculation);
+    updateCalculation('.');
+    ">
+      .
+    </button>
+
+  <!-- 5q. when we click =, use code eval(calculation) to converts string to number and calculate the result. save the result back to variable. display it in console. -->
+  <button onclick="
+  
+  calculation = eval(calculation).toString();
+  showCalc(); // 9.j
+  localStorage.setItem('calculation', calculation);
+  ">
+    =
+  </button>
+
+
+    <button onclick="
+    // calculation += ' / ';
+    // console.log(calculation);
+    updateCalculation(' / ');
+    ">
+      /
+    </button>
+   </p>
+
+   <p>
+    <button onclick="
+      calculation = '';
+      console.log(`Cleared`);
+      showCalc(); // 9.j
+      localStorage.setItem('calculation', calculation);
+      // 8h. ? remove
+          // localStorage.regmoveItem('calculation');
+          // console.log(`Cleared`);
+          // console.log(calculation);
+      ">
+      Clear
+    </button>
+   </p>
+
+
+
+  <!-- 5n. create script tag and variable 'calculation'-->
+  <script>
+
+    //let calculation = '';
+
+    // 8h. a. c. set item and defaultvalue
+    let calculation = localStorage.getItem('calculation') || ``;
+
+    showCalc ();
+
+
+
+    // 7j. create copy, create function updateCalculation
+    function updateCalculation(nilai){
+      calculation += nilai
+      showCalc(); // 9.j
+
+      // 8h. b. set local storage item
+      localStorage.setItem('calculation', JSON.stringify(calculation));
+      showCalc(); // 9.j
+    }
+
+    // 9j,
+    function showCalc (){
+    document.querySelector('.js-calc-text').innerHTML = calculation;
+  }
+
+  showCalc(); // 9.j
+  </script>
+
+
+
+</body>
+</html>

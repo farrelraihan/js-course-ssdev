@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+
+  <button class="js-subscribe-btn" onclick="
+    subscribe();
+  ">
+    Subscribe
+  </button>
+
+  <p>Amazon Shipping Calculator</p>
+
+  <input 
+  class="js-cost-input" 
+  placeholder="Cost of Order" 
+  type="number"
+  onkeydown="
+  handleCostKeydown(event);
+  ">
+
+  <button onclick="
+  calculateTotal();
+  ">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <!-- 9h. create inputbox, update the paragraph under it each press -->
+  <input type="text" class="js-9h-input" onkeyup="updateTextPage() ">
+
+  <p class="js-9h-livetext"></p>
+
+  <script>
+    // can also convert number to string
+    String(25);
+    window.console.log('window');
+ 
+
+    function handleCostKeydown (event) {
+      if (event.key === 'Enter'){
+        calculateTotal();
+      }
+    }
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-btn'); 
+   
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerText = 'Subscribed'
+      } else {
+        buttonElement.innerText = 'Subscribe'
+      }
+    }
+
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = Number(inputElement.value); // always a string have to put Number()
+      let total = document.querySelector('.js-total-cost');
+
+      console.log(cost);
+
+    if (cost <= 0){ // didnt work the below 0
+      document.querySelector('.js-total-cost').innerHTML = `Invalid Cost`;
+    } else  if (cost <= 40 ){
+        cost = Math.round(cost + 10) ;
+        // console.log(cost);
+        // console.log(typeof cost);
+    } else{
+      cost == cost
+    }
+
+    document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+
+  }
+
+  // 9h.
+  function updateTextPage (){
+    let text = document.querySelector('.js-9h-input').value;
+
+    document.querySelector('.js-9h-livetext').innerHTML = text;
+  }
+
+  </script>
+</body>
+</html>
