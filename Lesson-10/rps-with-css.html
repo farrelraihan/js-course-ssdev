@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors DOM</title>
+
+
+  <link rel="stylesheet" href="/Lesson-10/css/rps-with-css.css">
+  
+</head>
+<body>
+  <p class="title">Rock Paper Scissors</p>
+
+  <button class="move-btn" onclick="
+  playGame(`Rock`);
+  const computerPick = pickComputerMove();
+  ">
+    <img class="move-icon" src="rock-emoji.png" alt="rock emote">
+  </button>
+
+
+  <button class="move-btn" onclick="
+  playGame(`Paper`)
+ 
+  const computerPick = pickComputerMove();
+  ">
+    <img class="move-icon" src="paper-emoji.png" alt="paper emote">
+  </button>
+
+
+  <button class="move-btn" onclick="
+  playGame(`Scissors`);
+ 
+  ">
+    <img class="move-icon" src="scissors-emoji.png" alt="scissors emote">
+  </button>
+
+  <p class="js-result result-txt"></p>
+
+  <p class="js-pick"></p>
+
+
+  <p class="js-score score-txt"></p>
+
+  <button class="reset-btn" onclick="
+  resetScore();
+  ">
+    Reset Score
+  </button>
+
+  <script src="/Lesson-10/scripts/rps-with-css.js">
+    
+  </script>
+</body>
+</html>
