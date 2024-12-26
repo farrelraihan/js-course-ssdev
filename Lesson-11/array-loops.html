@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-Array and Loops</title>
+</head>
+<body>
+  
+  <script>
+    /*
+    // !! ARRAYS !!
+    // Array is another type of value
+    // list of values
+    [10, 20, 30, 40]
+    const myArray = [10, 20, 30, 40];
+    console.log(myArray);
+
+    // Position didalam Array nya. Starts from 0
+    console.log(myArray[2]);
+
+    // Change Value inside the array
+    myArray[0] = 99;
+    console.log(myArray);
+
+    // Things array can save
+    [1, 'hello', true, {name: 'socks'}, [1,2]]
+
+    // Check type in array.
+    // Cant use typeof cuz it will show Objects
+    console.log(Array.isArray([1,2]));
+
+    // Also have properties
+    console.log(myArray.length);
+
+    // add value to array
+    myArray.push(100);
+    console.log(myArray);
+
+    // remove value from array
+    // first: starting index want to remove
+    // second: numbers want to remove howmuch
+    myArray.splice();
+    console.log(myArray);
+    */
+
+    /*
+    // !! LOOPS !!
+      // while loop
+    let i = 1;
+    while (i <= 5) {
+      console.log(i);
+      i = i + 1; // increment step
+    };
+
+      // For loop
+      // (loop variable; condition; increment step)
+    for (let i = 1; i <= 7; i++) {
+      console.log(i)
+    };
+
+    // Non Standard loop use While
+    let randomNumber = 0;
+    while (randomNumber <= 0.5) {
+    randomNumber = Math.random();
+    console.log(randomNumber);
+    }
+    */
+
+    /*
+    // !! LOOPING THROUGH ARRAY
+    const todoList = [
+      'make dinner',
+      'wash car',
+      'watch anime'
+    ];
+
+    for (let index = 0; index <= todoList.length - 1; index++) {
+      const value = todoList[index];
+      console.log(value);
+      console.log(typeof value);
+
+    }
+      */
+
+    
+    // !! Accumulator Pattern !!
+      // 1. Create VAR to store Result
+      // 2. Loop through the array
+      // 3. Update Result
+    const numbs = [1, 1, 3];
+    let total = 0; // Accumulator VAR
+    for (let i = 0; i < numbs.length; i++) {
+      const num = numbs[i]; //buat variable untuk simpan value masing2 index yang diakses dari array
+      total = total + num;
+    }
+    console.log(total);
+    console.log(numbs);
+  
+
+    const numbsDoubled = []; // Accumulator Var
+    for (let i = 0; i < numbs.length; i++) {
+      const num = numbs[i];
+      dabel = num
+      numbsDoubled.push(num * 2)
+    }
+    console.log(numbsDoubled);
+  </script>
+</body>
+</html>
