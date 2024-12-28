@@ -106,7 +106,7 @@ function addArrays(array1, array2) {
 console.log(addArrays([1,1,2], [1,1,3]));
 
 
-// Create a function that takes array of numbers and return how many number in the array are greater than 0
+// 11k. Create a function that takes array of numbers and return how many number in the array are greater than 0
 function countPositive(array){
   let qttPositive = 0;
 
@@ -121,3 +121,40 @@ function countPositive(array){
 
 console.log(countPositive([1,-3,5]));
 console.log(countPositive([-2,3,-5,7,10]));
+
+
+// 11l. Create function takes array of numbers and return object with min and max numbers in the array. use loop instead of Math.min
+// 11m. update so handle null input
+function minMax(array){
+  let result = {
+    smallest:  null,
+    biggest: null
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    let value = array[i];
+    
+
+    if (result.smallest === null || value < result.smallest) {
+      result.smallest = value;
+    };
+
+    if (result.biggest === null || value > result.biggest) {
+      result.biggest = value;
+    };
+  }
+
+  console.log(result);
+}
+minMax([1, -3, 5]);
+minMax([-2, 3, -5, 7, 10]);
+minMax([]);
+
+// 11n. Create function countWords(words) takes array of strings and return object with how many times each string appeared.
+
+function countWords(words) {
+  const result = {};
+  
+  let words = words;
+
+};
