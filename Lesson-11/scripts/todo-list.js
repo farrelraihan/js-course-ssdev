@@ -1,12 +1,34 @@
-let todoList = ['make indomie', 'wash car'];
+let todoList = [{
+  name: 'make indomie', 
+  dueDate: '2022-12-22'
+}, {
+  name: 'wash car',
+  dueDate: '2022-12-22'
+}];
+
+renderTodoList();
 
 // show each index of the array to the page
 function renderTodoList () {
   let todoListHTML = '';
   for (let i = 0; i < todoList.length; i++) {
-    const todo = todoList[i];
-    const html = `<p>${todo}</p>`; // Generate HTML
-    todoListHTML = todoListHTML + html;
+    const todoObject = todoList[i];
+      // const name = todoObject.name;
+      // const dueDate = todoObject.dueDate;
+    // shortcut for above
+    const { name, dueDate} = todoObject;
+
+    const html = `
+    <div>${name}</div
+    <div> ${dueDate} </div> 
+    <button class= "delete-btn" onclick="
+    todoList.splice(${i}, 1); 
+    renderTodoList();
+    console.log(todoList);
+    "
+    > Delete </button>
+   `; // Generate HTML
+    todoListHTML += html;
   }
 
   // console.log(todoListHTML);
@@ -16,13 +38,18 @@ function renderTodoList () {
 
 function addTodoList () {
   const inputElement = document.querySelector('.js-todo-input'); //define or target the input box
+  const dateInputElement = document.querySelector('.js-due-date-input');
 
     // save the value of the input in an variable
   const todoName = inputElement.value;
+  const dueDate = dateInputElement.value;
   //console.log(todoName);
 
     // add the value to the array
-  todoList.push(todoName);
+  todoList.push({
+    name: todoName,
+    dueDate: dueDate
+  });
   console.log(todoList);
 
   inputElement.value = '';

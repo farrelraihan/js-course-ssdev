@@ -88,6 +88,7 @@
       // 1. Create VAR to store Result
       // 2. Loop through the array
       // 3. Update Result
+    /*
     const numbs = [1, 1, 3];
     let total = 0; // Accumulator VAR
     for (let i = 0; i < numbs.length; i++) {
@@ -105,6 +106,53 @@
       numbsDoubled.push(num * 2)
     }
     console.log(numbsDoubled);
+    */
+
+    // Arrays are references
+    const array1 = [1,2,3];
+    const array2 = array1.slice(); // potongan copy dari array 1. so when changed it doesnt affect array1
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    const [firstValue, secondValue, thirdValue] = [1,2,3];
+
+    for (let i = 1; i <= 10; i++ ) {
+      if (i % 3 === 0) {
+        continue; // skip 1 iteration
+      }
+      console.log(i);
+      if (i === 8) {
+        break; // early stop
+      } 
+    }
+
+    let i = 1;
+    while (i <= 10){
+      if (i % 3 === 0){
+        i++;
+        continue;
+      }
+      console.log(i);
+      i++;
+    }
+
+    function doubleArray(numbs) {
+      const numbsDoubled = []; // Accumulator Var
+
+      for (let i = 0; i < numbs.length; i++) {
+        const num = numbs[i];
+        if (num === 0){
+          return numbsDoubled; // kayak early break karena blm ada yg di push
+        }
+        numbsDoubled.push(num * 2)
+      }
+      return numbsDoubled;
+
+    }
+
+    console.log(([1,1,3]));
+    console.log(doubleArray([2,2,5]));
   </script>
 </body>
 </html>

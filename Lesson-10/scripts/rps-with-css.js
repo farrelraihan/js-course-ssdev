@@ -48,7 +48,7 @@ function playGame(userPick){
       } else if (computerPick === 'Scissors') {
         result = 'Tie';
       }  
-  } else if (userPick === `Rock`) {
+  } else if (userPick === `Rock`){
     if(computerPick === 'Rock'){
         result = 'Tie';
       } else if (computerPick === 'Paper') {

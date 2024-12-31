@@ -152,9 +152,9 @@ minMax([]);
 
 // 11n. Create function countWords(words) takes array of strings and return object with how many times each string appeared.
 
-function countWords(words) {
-  const result = {};
+// function countWords(words) {
+//   const result = {};
   
-  let words = words;
+//   let words = words;
 
-};
+// };
